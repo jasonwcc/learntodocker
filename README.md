@@ -4,7 +4,7 @@
 sudo podman search mysql
 
 # Download images
-sudo podman pull docker.io/library/mysql:latest \\
+sudo podman pull docker.io/library/mysql:latest \\ \
 sudo podman pull docker.io/library/wordpress:latest
 
 # Verify downloaded images
