@@ -4,23 +4,23 @@
 sudo podman search mysql
 
 # Download images
-sudo podman pull docker.io/library/mysql:latest
+sudo podman pull docker.io/library/mysql:latest \\
 sudo podman pull docker.io/library/wordpress:latest
 
 # Verify downloaded images
 sudo podman images
 
 # Start first db container
-sudo podman run --name mydb1 \
--e MYSQL_USER=user1 \
--e MYSQL_USER=pa55 \
--e MYSQL_DATABASE=data1db \
+sudo podman run --name mydb1 \\
+-e MYSQL_USER=user1 \\
+-e MYSQL_USER=pa55 \\
+-e MYSQL_DATABASE=data1db \\
 -e MYSQL_ROOT_PASSWORD=r00tpa55
--p 13306:3306 \
+-p 13306:3306 \\
 -d mysql
 
 # Start second db container
-sudo podman run --name mydb2 \
+sudo podman run --name mydb2 \\
 -e MYSQL_USER=user1 \
 -e MYSQL_USER=pa55 \
 -e MYSQL_DATABASE=data2db \
