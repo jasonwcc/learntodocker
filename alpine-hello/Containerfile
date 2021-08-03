@@ -1,0 +1,11 @@
+FROM docker.io/library/alpine
+
+ENV SCRIPTS="/opt/scripts"
+
+#RUN echo $SCRIPTS; mkdir -p /opt/scripts
+RUN mkdir -p $SCRIPTS
+
+#COPY ./start.sh /opt/scripts
+COPY ./start.sh $SCRIPTS
+
+CMD $SCRIPTS/start.sh

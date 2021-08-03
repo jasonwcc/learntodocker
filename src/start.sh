@@ -1,7 +1,7 @@
-#!/bin/bash
+i=0
 while true;
 do 
-  (( i++ ))
+  i=`expr $i + 1`
   echo "$i. `date +%H:%M:%S` Hello World "
   sleep 5
 done
