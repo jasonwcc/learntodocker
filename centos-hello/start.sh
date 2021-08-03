@@ -2,6 +2,6 @@ i=0
 while true;
 do 
   i=`expr $i + 1`
-  echo "$i. `date +%H:%M:%S` Hello World "
+  echo "$i. `date +%H:%M:%S` Hello World - added lines"
   sleep 5
 done
